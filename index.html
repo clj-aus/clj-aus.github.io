@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>clj-aus — Australia's Clojure meetup</title>
+<meta name="description" content="Australia's Clojure meetup. Monthly, hybrid — in person in Sydney, streamed nationwide. Clojure, ClojureScript, ClojureDart, Babashka, jank and Jolt.">
+<meta property="og:title" content="clj-aus — Australia's Clojure meetup">
+<meta property="og:description" content="Monthly, hybrid — in person in Sydney, streamed nationwide. Next session: Three native Clojures, one C game library.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ink:#0D1411; --surface:#141F19; --line:#25332C;
+  --bone:#E7EEE9; --sage:#93A79B; --dim:#63776C;
+  --euc:#62C193; --euc-dim:#2F6E51;
+  --mono:"Fira Code",ui-monospace,Menlo,monospace;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:radial-gradient(130% 80% at 20% -10%,#18291F 0%,var(--ink) 60%);
+  background-attachment:fixed;
+  color:var(--bone);font-family:var(--sans);line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+/* hero */
+header{padding:96px 0 72px;text-align:center}
+.mark{font-family:var(--mono);font-size:clamp(2.6rem,9vw,4.6rem);font-weight:500;
+  letter-spacing:-.045em;line-height:1;margin-bottom:26px}
+.mark .p{color:var(--euc);font-weight:300}
+.rule{width:120px;height:2px;background:var(--euc);margin:0 auto 26px;opacity:.9}
+.tagline{font-family:var(--mono);font-size:.82rem;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--sage)}
+.blurb{margin:34px auto 0;max-width:60ch;color:var(--sage);font-size:1.05rem}
+.blurb strong{color:var(--bone);font-weight:500}
+
+/* next event */
+.next{background:var(--surface);border:1px solid var(--line);border-radius:6px;
+  padding:32px;margin:56px 0 0;border-top:3px solid var(--euc)}
+.kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--euc);margin-bottom:14px}
+.next h2{font-size:1.5rem;font-weight:600;letter-spacing:-.02em;margin-bottom:8px;line-height:1.3}
+.when{font-family:var(--mono);font-size:.9rem;color:var(--sage);margin-bottom:20px}
+.next p{color:var(--sage);margin-bottom:22px}
+.cta{display:inline-block;background:var(--euc);color:#0B1A12;font-weight:600;
+  font-size:.94rem;padding:11px 26px;border-radius:4px;text-decoration:none;
+  transition:transform .12s,box-shadow .12s}
+.cta:hover{transform:translateY(-1px);box-shadow:0 6px 18px -6px rgba(98,193,147,.6)}
+
+/* sections */
+section{padding:60px 0 0}
+h3{font-family:var(--mono);font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--euc);margin-bottom:18px}
+section p{color:var(--sage);max-width:64ch}
+section p+p{margin-top:14px}
+section p strong{color:var(--bone);font-weight:500}
+code{font-family:var(--mono);font-size:.88em;color:var(--euc);
+  background:rgba(98,193,147,.09);padding:1px 6px;border-radius:3px}
+
+/* links grid */
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:14px;margin-top:20px}
+.links a{display:block;background:var(--surface);border:1px solid var(--line);
+  border-radius:5px;padding:18px 20px;text-decoration:none;color:var(--bone);
+  transition:border-color .15s,transform .12s}
+.links a:hover{border-color:var(--euc);transform:translateY(-2px)}
+.links .lt{font-weight:600;font-size:.98rem;margin-bottom:3px}
+.links .ld{font-size:.84rem;color:var(--dim)}
+
+footer{margin-top:86px;padding:30px 0 60px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:.76rem;color:var(--dim);
+  display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center}
+footer a{color:var(--sage)}
+a{color:var(--euc)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="mark"><span class="p">(</span>clj-aus<span class="p">)</span></div>
+  <div class="rule"></div>
+  <div class="tagline">Australia&rsquo;s Clojure Meetup</div>
+  <p class="blurb">Australia doesn&rsquo;t currently have an active Clojure user group in any city.
+  <strong>We&rsquo;re fixing that.</strong> Monthly, hybrid &mdash; in person in Sydney, streamed for
+  everyone else, and every session recorded and published.</p>
+</header>
+
+<div class="next">
+  <div class="kicker">Next session</div>
+  <h2>clj-aus #1 &mdash; Three native Clojures, one C game library</h2>
+  <div class="when">Wednesday 16 September 2026 &middot; 6:30&ndash;7:30pm AEST &middot; Online</div>
+  <p>The same <a href="https://www.raylib.com/">raylib</a> examples running under three different
+  Clojures &mdash; <a href="https://github.com/jolt-lang/jolt">Jolt</a> on Chez Scheme,
+  <a href="https://jank-lang.org">jank</a> via C++/LLVM, and JVM Clojure over Panama &mdash; and what
+  each runtime does with a C library that passes structs by value everywhere. Live demos throughout.</p>
+  <a class="cta" href="https://www.meetup.com/clojure-australia/events/316277511/">RSVP on Meetup &rarr;</a>
+</div>
+
+<section>
+  <h3>What we cover</h3>
+  <p>Clojure and ClojureScript first, plus the wider family around them: <strong>ClojureDart</strong>
+  for mobile, <strong>Babashka</strong> for scripting, and newer hosts like <strong>jank</strong>
+  (native, LLVM/C++) and <strong>Jolt</strong> (Clojure on Chez Scheme).</p>
+  <p>Talks run from production experience reports to language and tooling deep-dives to
+  beginner-friendly intros. Some months we skip the talks and write code together instead.</p>
+</section>
+
+<section>
+  <h3>Who should come</h3>
+  <p>Anyone who writes Clojure, used to, or is simply curious. If you&rsquo;re arriving from Java,
+  Python or JavaScript and have never written a parenthesis in anger, you&rsquo;re exactly who we
+  built this for.</p>
+</section>
+
+<section>
+  <h3>Speaking</h3>
+  <p>From session two onward, every clj-aus meetup has a lightning-talk slot &mdash; 5 to 10 minutes,
+  and <strong>first-time speakers get priority</strong>. You don&rsquo;t need to be an expert and you
+  don&rsquo;t need a finished thing. &ldquo;Here&rsquo;s something I built and here&rsquo;s what
+  surprised me&rdquo; is a great talk.</p>
+  <p>Open an issue on <a href="https://github.com/clj-aus/meetings">clj-aus/meetings</a> or say so in
+  the Meetup comments.</p>
+</section>
+
+<section>
+  <h3>Find us</h3>
+  <div class="links">
+    <a href="https://www.meetup.com/clojure-australia/">
+      <div class="lt">Meetup</div><div class="ld">Events and RSVPs</div></a>
+    <a href="https://github.com/clj-aus">
+      <div class="lt">GitHub</div><div class="ld">Notes, slides, this site</div></a>
+    <a href="https://clojurians.slack.com">
+      <div class="lt">Clojurians Slack</div><div class="ld">#clj-aus</div></a>
+    <a href="https://github.com/clj-aus/meetings">
+      <div class="lt">Archive</div><div class="ld">Past sessions and recordings</div></a>
+  </div>
+</section>
+
+<section>
+  <h3>Built to outlast us</h3>
+  <p>Sydney had a Clojure meetup once. It went quiet when nobody kept it running, and the group was
+  discontinued &mdash; taking its member list with it. This time the site, the recordings and the
+  teaching material are all open source under the
+  <a href="https://github.com/clj-aus">clj-aus</a> organisation, so the group&rsquo;s assets
+  don&rsquo;t depend on any one person&rsquo;s account staying alive.</p>
+</section>
+
+<footer>
+  <span>clj-aus &middot; Australia&rsquo;s Clojure meetup</span>
+  <a href="https://www.contributor-covenant.org/version/2/1/code_of_conduct/">Code of Conduct</a>
+  <a href="https://github.com/clj-aus/clj-aus.github.io">Source</a>
+</footer>
+
+</div>
+</body>
+</html>
